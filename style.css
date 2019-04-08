@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #E7E5E5;
+}
+
+#checkbox-1,
+#checkbox-2,
+#checkbox-3,
+#checkbox-4 {
+    display: none;
+}
+
+.caption {
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem 0;
+}
+
+.page {
+    width: 100%;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Стилизация левой колонки */
+
+.cat-nav {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 10rem;
+    list-style: none;
+    background-color: #CBCBCB;
+}
+
+.cat-nav__name {
+    flex-basis: 2.5rem;
+    padding: 1rem .5rem;
+    font-size: 1.1rem;
+    border-bottom: 1px solid grey;
+}
+
+.cat-nav__name:hover {
+    background-color: #595959;
+    color: #fff;
+    border-top: .5px solid #fff;
+    border-bottom: .5px solid #fff;
+}
+
+
+/* Стилизация центральной колонки */
+
+.cat-items {
+    flex-basis: 52rem;
+    height: 70rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.cat-item {
+    position: relative;
+    flex-basis: 32.8%;
+    height: 24.5%;
+}
+
+.cat-item:nth-child(2),
+.cat-item:nth-child(6) {
+    flex-basis: 66%;
+}
+
+.cat-item:nth-child(8) {
+    flex-basis: 100%;
+}
+
+.cat-item__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cat-item:hover::after {
+    content: attr(data-name);
+    position: absolute;
+    left: 0;
+    bottom: 1rem;
+    padding: 1.2rem .8rem; 
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+
+#checkbox-1:checked ~ .cat-items > .cat-item,
+#checkbox-2:checked ~ .cat-items > .cat-item,
+#checkbox-3:checked ~ .cat-items > .cat-item,
+#checkbox-4:checked ~ .cat-items > .cat-item {
+    opacity: .5;
+}
+
+#checkbox-1:checked ~ .cat-items > .cat-item__4,
+#checkbox-1:checked ~ .cat-items > .cat-item__7,
+#checkbox-2:checked ~ .cat-items > .cat-item__3,
+#checkbox-2:checked ~ .cat-items > .cat-item__5,
+#checkbox-3:checked ~ .cat-items > .cat-item__2,
+#checkbox-3:checked ~ .cat-items > .cat-item__8,
+#checkbox-4:checked ~ .cat-items > .cat-item__1,
+#checkbox-4:checked ~ .cat-items > .cat-item__6 {
+    opacity: 1;
+}
+
+/* Стилизация правой колонки */
+
+.rating-block {
+    position: relative;
+    flex-basis: 13rem;
+    align-self: flex-start;
+    background-color: #CBCBCB;
+}
+
+.rating-block__title {
+    padding: .5rem .5rem;
+    font-size: 1.3rem;
+    font-weight: normal;
+    color: #B30F13;
+    text-transform: uppercase;
+}
+
+.rating-block__sort {
+    position: relative;
+    left: 5rem;
+    margin-right: 1.2rem;
+    margin-bottom: 1rem;
+    font-size: .9rem;
+}
+
+#check {
+    position: absolute;
+    right: 1.2rem;
+    margin-left: .5rem;
+    margin-top: .2rem;
+}
+
+.rating-block__items {
+    display: flex;
+    flex-direction: column;
+}
+
+.rating-block__item {
+    flex-basis: 2.5rem;
+    padding: .5rem 1.2rem .5rem .5rem;
+}
+
+.rating-block__item-name {
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+}
+
+.rating-block__item-scale {
+    float: left;
+    width: 150px;
+    height: 1rem;
+    background-color: white;
+}
+
+.high-scale {
+    background: linear-gradient(to right, #2ECC04 60%, #fff);
+}
+
+.middle-scale {
+    background: linear-gradient(to right, #F3F305 60%, #fff);
+}
+
+.low-scale {
+    background: linear-gradient(to right, #F31105 60%, #fff);
+}
+
+.rating-block__item-score {
+    float: right;
+    text-align: right;
+    font-weight: bold;
+}
+
+.score-9 + .rating-block__item-scale {
+    width: 130px;
+}
+
+.score-8 + .rating-block__item-scale {
+    width: 110px;
+}
+
+.score-6 + .rating-block__item-scale {
+    width: 70px;
+}
+
+#check:checked ~ .rating-block__items > div[data-score='10'] {
+    order: -1;
+}
+
+#check:checked ~ .rating-block__items > div[data-score='9'] {
+    order: 1;
+}
+
+#check:checked ~ .rating-block__items > div[data-score='8']{
+    order: 2;
+}
+
+#check:checked ~ .rating-block__items > div[data-score='6'] {
+    order: 3;
+}
+/* стили для подвала */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    border-top: 1px solid grey;
+}
+
+.copyright {
+    margin-left: 1.5rem;
+}
+
+.adr {
+    margin-right: 1.5rem;
+    font-style: normal;
+}
+
+.adr a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .cat-nav {
+        flex-basis: 20%;
+    }
+    .cat-items {
+        flex-basis: 50%;
+        height: 50rem;
+    }
+    .rating-block {
+       flex-basis: 20%;
+    }
+    .rating-block__sort {
+        left: 2.5rem;
+    }
+}

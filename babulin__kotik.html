@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Бабуленькины котятки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="caption">Бабуленькины котятки</h1>
+    <section class="page">
+        <input type="checkbox" value="1" id="checkbox-1">
+        <input type="checkbox" value="2" id="checkbox-2">
+        <input type="checkbox" value="3" id="checkbox-3">
+        <input type="checkbox" value="4" id="checkbox-4">
+        <ul class="cat-nav">
+            <label for="checkbox-1"><li class="cat-nav__name cat-nav__name-1">Абиссинская</li></label>
+            <label for="checkbox-2"><li class="cat-nav__name cat-nav__name-2">Девон-рекс</li></label>
+            <label for="checkbox-3"><li class="cat-nav__name cat-nav__name-3">Экзот</li></label>
+            <label for="checkbox-4"><li class="cat-nav__name cat-nav__name-4">Сомалийская</li></label>
+        </ul>
+        <div class="cat-items">
+            <figure class="cat-item cat-item__1" data-name="Куся, 1 год">
+                <img class="cat-item__photo" src="img/somali-1.jpg" alt="somali-cat">
+            </figure>
+            <figure class="cat-item cat-item__2" data-name="Тоша, 3 года">
+                <img class="cat-item__photo" src="img/ekzot-1.jpg" alt="ekzot-cat">
+            </figure>
+            <figure class="cat-item cat-item__3" data-name="Мур и Мяу, 1,5 года">
+                <img class="cat-item__photo" src="img/devon_reks-1.jpg" alt="devon_reks-cat">
+            </figure>
+            <figure class="cat-item cat-item__4" data-name="Феликс, 3 года">
+                <img class="cat-item__photo" src="img/abyssinian-1.jpg" alt="abyssinian-cat">
+            </figure>
+            <figure class="cat-item cat-item__5" data-name="Буся, 2 года">
+                <img class="cat-item__photo" src="img/devon_reks-2.jpg" alt="devon_reks-cat">
+            </figure>
+            <figure class="cat-item cat-item__6" data-name="Белка, 4 года">
+                <img class="cat-item__photo" src="img/somali-2.jpg" alt="somali-cat">
+            </figure>
+            <figure class="cat-item cat-item__7" data-name="Шанель, 4 года">
+                <img class="cat-item__photo" src="img/abyssinian-2.jpg" alt="abyssinian-cat">
+            </figure>
+            <figure class="cat-item cat-item__8" data-name="Пельмеша, 6 лет">
+                <img class="cat-item__photo" src="img/ekzot-2.jpg" alt="ekzot-cat">
+            </figure>
+        </div>
+        <div class="rating-block">
+            <h3 class="rating-block__title">Рейтинг</h3>
+            <label class="rating-block__sort" for="check">по убыванию</label>
+            <input type="checkbox" id="check">
+            <div class="rating-block__items">
+                <div class="rating-block__item rating-block__item-1" data-score="6">
+                    <p class="rating-block__item-name">Экзот</p>
+                    <p class="rating-block__item-score score-6">6</p>
+                    <div class="rating-block__item-scale low-scale"></div>
+                </div>
+                <div class="rating-block__item rating-block__item-2" data-score="10">
+                    <p class="rating-block__item-name">Сомалийская</p>
+                    <p class="rating-block__item-score score-10">10</p>
+                    <div class="rating-block__item-scale high-scale"></div>
+                </div>
+                <div class="rating-block__item rating-block__item-3" data-score="8">
+                    <p class="rating-block__item-name">Девон-рекс</p>
+                    <p class="rating-block__item-score score-8">8</p>
+                    <div class="rating-block__item-scale middle-scale"></div>
+                </div>
+                <div class="rating-block__item rating-block__item-4" data-score="9">
+                    <p class="rating-block__item-name">Абиссинская</p>
+                    <p class="rating-block__item-score score-9">9</p>
+                    <div class="rating-block__item-scale high-scale"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p class="copyright">&copy; ООО Бабуленькины котятки, 2015</p>
+        <address class="adr"><a href="#">Наш адрес: улица Котовая, д.5</a></address>
+    </footer>
+</body>
+</html>
